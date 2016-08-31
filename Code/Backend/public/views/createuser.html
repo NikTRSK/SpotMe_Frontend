@@ -1,0 +1,40 @@
+<div class="jumbotron">
+		<div class="create-user">
+			<div class="form-group">
+				<label for="inputFirstName">First Name</label>
+				<input type="text" class="form-control" id="inputFirstName" ng-model="user.firstname" placeholder="First Name">
+				<span ng-show="errorFirstName">{{errorFirstName}}</span>
+			</div>
+
+			<div class="form-group">
+				<label for="inputLastName">Last Name</label>
+				<input type="text" class="form-control" id="inputLastName" ng-model="user.lastname" placeholder="Last Name">
+				<span ng-show="errorLastName">{{errorLastName}}</span>
+			</div>
+
+			<div class="form-group">
+				<label for="inputUsername">Username</label>
+				<input type="text" class="form-control" id="inputUsername" ng-model="user.username" placeholder="Username">
+				<span ng-show="errorUsername">{{errorUsername}}</span>
+			</div>
+
+			<div class="form-group">
+				<label for="inputUsername">Password</label>
+				<input type="text" class="form-control" id="inputPassword" ng-model="user.password" placeholder="Password">
+				<span ng-show="errorPassword">{{errorPassword}}</span>
+			</div>
+
+			<div class="form-group">
+				<label for="inputEmail">Email</label>
+				<input type="email" class="form-control" id="inputEmail" ng-model="user.email" placeholder="Email">
+				<span ng-show="errorEmail">{{errorEmail}}</span>
+			</div>
+
+			<div class="form-group">
+				<label for="inputPhone">Phone</label>
+				<input type="number" class="form-control" id="inputPhone" ng-model="user.phone" placeholder="Phone">
+				<span ng-show="errorPhone">{{errorPhone}}</span>
+			</div>
+		</div>
+		<button type="submit" class="btn btn-primary" ng-click="createUser()">Create User</button>
+</div>

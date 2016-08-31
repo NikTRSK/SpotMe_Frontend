@@ -1,0 +1,62 @@
+<nav id="mainNavbar" class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">spLit API Test</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="home.html">Home</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Users
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="createser.html">Create Users</a></li>
+                    <li class="active"><a href="#">Manage Users</a></li>
+                </ul>
+            </li>
+            <li><a href="bills.html">Bills</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="jumbotron">
+        <!-- Create bill forms -->
+        <form id="createBillForm" method="post" class="form-horizontal">
+            <div class="form-gorup">
+                <div class="col-xs-2">
+                    <input type="text" class="form-control" name="item[0].name" placeholder="Item" />
+                </div>
+                <div class="col-xs-1">
+                    <input type="number" class="form-control" name="item[0].price" placeholder="$0.00" />
+                </div>
+                <div class="col-xs-1">
+                    <input type="number" class="form-control" name="item[0].qty" placeholder="0" />
+                </div>
+                <div class="col-xs-1">
+                    <button type="button" class="btn btn-success addButton"><i class="fa fa-plus"></i>
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </button>
+
+                </div>
+            </div>
+            <!-- Hide form -->
+            <div class="form-gorup hide" id="createBillTemplate">
+                <div class="col-xs-2 col-xs-offset-1">
+                    <input type="text" class="form-control" name="name" placeholder="Item" />
+                </div>
+                <div class="col-xs-1">
+                    <input type="number" class="form-control" name="price" placeholder="$0.00" />
+                </div>
+                <div class="col-xs-1">
+                    <input type="number" class="form-control" name="qty" placeholder="0" />
+                </div>
+                <div class="col-xs-1">
+                    <button type="button" class="btn btn-default removeButton btn-sm"><i class="fa fa-minus"></i></button>
+                </div>
+            </div>
+        </form>
+        <script src="/controllers/bill.js"></script>
+    </div>

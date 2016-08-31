@@ -1,0 +1,30 @@
+{
+  "name": "SpotME_api",
+  "version": "0.0.1",
+  "private": true,
+  "description": "API for the SpotMe app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nikica Trajkovski",
+  "license": "ISC",
+  "dependencies": {
+    "express" : "~4.5.1",
+    "ejs" : "~0.8.5",
+    "mongoose" : "~4.4.7",
+    "body-parser" : "~1.4.2",
+    "cookie-parser": "~1.0.0",
+    "method-override" : "~2.0.2",
+    "node-restful": "~0.2.4",
+    "passport" : "~0.1.17",
+    "passport-local" : "~0.1.6",
+    "passport-facebook" : "~1.0.2",
+    "passport-twitter" : "~1.0.2",
+    "passport-google-oauth" : "~0.1.5",
+    "express-session": "~1.13.0",
+    "bcrypt-nodejs": "*",
+    "connect-flash": "*",
+    "morgan": "~1.0.0"
+  }
+}

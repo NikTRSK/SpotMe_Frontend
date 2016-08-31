@@ -1,0 +1,17 @@
+<div class="col-sm-6 col-md-4 col-md-offset-4" id="login-box">
+    <div class="header"><strong>Sign into spLit</strong></div><br>
+    <form>
+        <div class="body bg-gray">
+            <div class="form-group">
+                <input type="text" name="username" required autofocus class="form-control" placeholder="Username"/>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" required class="form-control" placeholder="Password"/>
+            </div>
+        </div>
+        <div class="footer">
+            <button type="submit" class="btn bg-olive btn-block" ng-click="loginUser()">Login</button>
+        </div>
+    </form>
+    <h3>{{message}}</h3>
+</div>
