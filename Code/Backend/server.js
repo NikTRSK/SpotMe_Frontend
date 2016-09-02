@@ -5,6 +5,7 @@
 var express  = require('express');
 var app      = express();
 var port     = process.env.PORT || 8080;
+var IP       = '0.0.0.0' // added this to use with VM test server
 var mongoose = require('mongoose');
 var passport = require('passport');
 var flash    = require('connect-flash');
@@ -39,5 +40,6 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 require('./api/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
 // launch ======================================================================
-app.listen(port);
+// app.listen(port);
+app.listen(port, IP); // changed this to use with VM test server
 console.log('The magic happens on port ' + port);
