@@ -1,0 +1,76 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "com.spotme"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.spotme"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.spotme"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.spotme"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.spotme"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.spotme"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.spotme"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.spotme"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.spotme"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.spotme"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.spotme"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "com.spotme"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.spotme"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.spotme"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.spotme"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.spotme"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.spotme"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.spotme"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.spotme"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.spotme"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.spotme"
+        }
+    }
+}
