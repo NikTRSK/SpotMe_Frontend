@@ -1,4 +1,10 @@
 {
   "name": "SpotMe",
-  "app_id": ""
+  "app_id": "4cad9747",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://192.168.237.128:8080/api/"
+    }
+  ]
 }

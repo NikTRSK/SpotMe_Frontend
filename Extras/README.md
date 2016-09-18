@@ -17,3 +17,7 @@ where VM_NAME is the name of your virtual machine (e.g Ubuntu) and SHARE_NAME th
 The Shared folder is under /media/sf_<share name>
 
 If there are still issues run VBox with admin privilidges.
+
+
+#### Setup VMWare Tools on Ubuntu Server
+https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1022525

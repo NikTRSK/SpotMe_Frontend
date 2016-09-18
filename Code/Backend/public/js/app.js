@@ -1,1 +1,0 @@
-angular.module('splitApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'UsersCtrl']);

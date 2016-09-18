@@ -18,3 +18,5 @@
 `ionic build <ios, android>`
 
 `ionic emulate <ios, android>`
+
+can also use `ionic serve --lab`
