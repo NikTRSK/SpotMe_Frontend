@@ -4,8 +4,25 @@
         <h1 class="title">SpotMe</h1>
     </ion-header-bar>    
     <ion-content has-header="true" padding="true">
-      <h2 class="center">create your profile</h2>
-      <a class="button icon-right ion-chevron-right" href="#/second">Next</a>
+      <h3 class="center">create your profile</h3>
+      <div class="center"><img class= "profile_profilePic" src="../img/dummy_pic.jpg"></div>
+      <div class="profile_nameLbl"><label>Name placeholder</label></div>
+      <div class="profile_universityLbl"><label>Uni placeholder</label></div>
+      <div class="pad-item"><label>Where are you today?</label></div>
+      <div class="list">
+    <label>
+    <select>
+      <option selected>Height</option>
+      <option>6.0</option>
+      <option>6.1</option>
+      <option>6.2</option>
+    </select>
+    </label>
+       <ion-checkbox ng-model="isChecked">Checkbox Label</ion-checkbox>
+      </div>
+      <div class="nextBtn">
+        <a class="button icon-right ion-chevron-right center" href="#/second">Next</a>
+      </div>
     </ion-content>
   </ion-view>
 <!-- </script>
