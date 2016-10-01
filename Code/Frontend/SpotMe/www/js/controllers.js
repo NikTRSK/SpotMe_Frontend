@@ -56,6 +56,23 @@ angular.module('starter')
     $state.go('outside.login');
   };
 })
+
+.controller('CreateProfileCtrl', function($scope, AuthService, API_ENDPOINT, $http, $state) {
+  // $scope.destroySession = function() {
+  //   AuthService.logout();
+  // };
+ 
+  // $scope.getInfo = function() {
+  //   $http.get(API_ENDPOINT.url + '/memberinfo').then(function(result) {
+  //     $scope.memberinfo = result.data.msg;
+  //   });
+  // };
+ 
+  // $scope.logout = function() {
+  //   AuthService.logout();
+  //   $state.go('outside.login');
+  // };
+})
  
 .controller('AppCtrl', function($scope, $state, $ionicPopup, AuthService, AUTH_EVENTS) {
   $scope.$on(AUTH_EVENTS.notAuthenticated, function(event) {

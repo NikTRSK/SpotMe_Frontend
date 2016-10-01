@@ -45,16 +45,21 @@ angular.module('starter', ['ionic'])
     url: '/inside',
     templateUrl: 'templates/inside.html',
     controller: 'InsideCtrl'
+  })
+  .state('createProfile', {
+    url: '/createProfile',
+    templateUrl: 'templates/createProfile.html',
+    controller: 'CreateProfileCtrl'
   });
- 
   $urlRouterProvider.otherwise('/outside/login');
 })
  
 .run(function ($rootScope, $state, AuthService, AUTH_EVENTS) {
   $rootScope.$on('$stateChangeStart', function (event,next, nextParams, fromState) {
+
     if (!AuthService.isAuthenticated()) {
       console.log(next.name);
-      if (next.name !== 'outside.login' && next.name !== 'outside.register') {
+      if (next.name !== 'outside.login' && next.name !== 'outside.register' && next.name !== 'createProfile') { // testing only. take out last condition
         event.preventDefault();
         $state.go('outside.login');
       }
