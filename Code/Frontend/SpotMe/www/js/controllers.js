@@ -58,20 +58,12 @@ angular.module('starter')
 })
 
 .controller('CreateProfileCtrl', function($scope, AuthService, API_ENDPOINT, $http, $state) {
-  // $scope.destroySession = function() {
-  //   AuthService.logout();
-  // };
- 
-  // $scope.getInfo = function() {
-  //   $http.get(API_ENDPOINT.url + '/memberinfo').then(function(result) {
-  //     $scope.memberinfo = result.data.msg;
-  //   });
-  // };
- 
-  // $scope.logout = function() {
-  //   AuthService.logout();
-  //   $state.go('outside.login');
-  // };
+    $scope.fitness_level = [
+    // value is the value of the field to be used with logic
+    { text: "Beginner", value: "beginner" },
+    { text: "Intermediate", value: "intermediate" },
+    { text: "Advanced", value: "advanced" }
+  ];
 })
  
 .controller('AppCtrl', function($scope, $state, $ionicPopup, AuthService, AUTH_EVENTS) {

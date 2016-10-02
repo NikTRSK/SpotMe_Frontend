@@ -10,16 +10,65 @@
       <div class="profile_universityLbl"><label>Uni placeholder</label></div>
       <div class="pad-item"><label>Where are you today?</label></div>
       <div class="list">
-    <label>
-    <select>
-      <option selected>Height</option>
-      <option>6.0</option>
-      <option>6.1</option>
-      <option>6.2</option>
-    </select>
-    </label>
-       <ion-checkbox ng-model="isChecked">Checkbox Label</ion-checkbox>
-      </div>
+    <div>
+      <label>
+      <select>
+        <option selected>Height</option>
+        <option>6.0</option>
+        <option>6.1</option>
+        <option>6.2</option>
+      </select>
+      </label>
+      <label for="cb" class="pure-checkbox right-align">
+        <input id="cb" type="checkbox" style="float: left; margin-top: 5px;"><div style="margin-left: 25px;">Do not show on profile</div>
+      </label>
+    </div>
+
+    <div>
+      <label>
+        <select>
+          <option selected>Weight</option>
+          <option>170</option>
+          <option>180</option>
+          <option>190</option>
+        </select>
+      </label>
+      <label for="cb" class="pure-checkbox right-align">
+        <input id="cb" type="checkbox" style="float: left; margin-top: 5px;"><div style="margin-left: 25px;">Do not show on profile</div>
+      </label>
+    </div>
+    <div class="pad-item"><label>Fitness Level</label></div>
+    <div>
+      <ul>
+      <input type="radio" id="f-option" name="selector">
+          <label for="f-option">a</label>
+        <li>
+          <input type="radio" id="f-option" name="selector">
+          <label for="f-option">a</label>
+          
+          <div class="check"></div>
+        </li>
+        
+        <li>
+          <input type="radio" id="s-option" name="selector">
+          <label for="s-option">b</label>
+          
+          <div class="check"><div class="inside"></div></div>
+        </li>
+        
+        <li>
+          <input type="radio" id="t-option" name="selector">
+          <label for="t-option">c</label>
+          
+          <div class="check"><div class="inside"></div></div>
+        </li>
+      </ul>
+<!--         <ion-radio ng-repeat="item in fitness_level"
+                   ng-value="item.value"
+                   ng-model="data.fitness_level">
+          {{ item.text }}
+        </ion-radio> -->
+    </div>
       <div class="nextBtn">
         <a class="button icon-right ion-chevron-right center" href="#/second">Next</a>
       </div>
