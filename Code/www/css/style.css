@@ -120,3 +120,12 @@ input[type=radio]:checked ~ .check::before{
 input[type=radio]:checked ~ label{
   color: #0DFF92;
 }
+
+/* Next button */
+/* Styles here */
+.button-circular {
+  border: 3px solid black;
+  border-radius: 25%;
+  padding: 0px 20px 0px 20px;
+  float: right;
+}
