@@ -4,10 +4,40 @@
         <h1 class="title">SpotMe</h1>
     </ion-header-bar>    
     <ion-content has-header="true" padding="true">
-      <h3 class="center">create your profile</h3>
+      <h3 class="center">Create Your Profile</h3>
       <div class="center"><img class= "profile_profilePic" src="../img/dummy_pic.jpg"></div>
-      <div class="profile_nameLbl"><label>Name placeholder</label></div>
-      <div class="profile_universityLbl"><label>Uni placeholder</label></div>
+
+      <!-- Name Input -->
+      <div class="row">
+        <div class="form-group col-xs-6">
+          <label for="firstname" class="sr-only">
+            <input id="firstname" class="form-control input-group-lg reg_name" type="text" name="firstname"
+            title="Enter first name"
+            placeholder="First Name"/>
+          </label>
+        </div>
+        <div class="form-group col-xs-6">
+          <label for="lastname" class="sr-only">
+            <input id="lastname" class="form-control input-group-lg reg_name" type="text" name="lastname"
+            title="Enter last name"
+            placeholder="Last Name"/>
+          </label>
+        </div>
+      </div>
+
+      <!-- University Input -->
+      <div class="row">
+        <div class="form-group col-xs-6">
+            <label for="lastname" class="sr-only"></label>
+              <input name="University" type="text" title="Enter university" placeholder="University"/>
+        </div>
+        <div class="form-group col-xs-6">
+            <label for="age" class="sr-only"></label>
+              <input name="Age" type="text" title="Enter age" placeholder="Age"/>
+              </br>
+        </div>
+      </div>
+
       <div class="pad-item"><label>Where are you today?</label></div>
       <div class="list">
     <div>
@@ -37,52 +67,17 @@
         <input id="cb" type="checkbox" style="float: left; margin-top: 5px;"><div style="margin-left: 25px;">Do not show on profile</div>
       </label>
     </div>
+
+    </br>
     <div class="pad-item"><label>Fitness Level</label></div>
     <div>
       <ul>
-      <input type="radio" id="f-option" name="selector">
-          <label for="f-option">a</label>
-        <li>
-          <input type="radio" id="f-option" name="selector">
-          <label for="f-option">a</label>
-          
-          <div class="check"></div>
-        </li>
-        
-        <li>
-          <input type="radio" id="s-option" name="selector">
-          <label for="s-option">b</label>
-          
-          <div class="check"><div class="inside"></div></div>
-        </li>
-        
-        <li>
-          <input type="radio" id="t-option" name="selector">
-          <label for="t-option">c</label>
-          
-          <div class="check"><div class="inside"></div></div>
-        </li>
+        <form action="">
+          <input type="radio" name="FitnessLevel" value="Beginner"> Begineer<br>
+          <input type="radio" name="FitnessLevel" value="Intermediate"> Intermediate<br>
+          <input type="radio" name="FitnessLevel" value="Advanced"> Advanced<br>
+        </form>
       </ul>
-<!--         <ion-radio ng-repeat="item in fitness_level"
-                   ng-value="item.value"
-                   ng-model="data.fitness_level">
-          {{ item.text }}
-        </ion-radio> -->
     </div>
-<!--       <div class="nextBtn">
-        <a class="button icon-right ion-chevron-right center" href="#/second">Next</a> -->
-        <button class="button button-light button-circular">Next</button>
-      </div>
-    </ion-content>
-  </ion-view>
-<!-- </script>
-<script id="second.html" type="text/ng-template"> -->
-<!--   <ion-view>
-    <ion-header-bar class="bar-header">
-        <h1 class="title">Second Page</h1>
-    </ion-header-bar>        
-    <ion-content has-header="true" padding="true">
-      <a class="button icon-left ion-home" href="#/">Go back!</a>
-    </ion-content>
-  </ion-view> -->
-<!-- </script>   -->
+
+    <a class="button icon-right ion-chevron-right button-calm" style="float: right";>Next</a>
