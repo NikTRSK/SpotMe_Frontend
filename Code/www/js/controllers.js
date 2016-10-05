@@ -65,6 +65,15 @@ angular.module('starter')
     { text: "Advanced", value: "advanced" }
   ];
 })
+
+.controller('CreateProfile2Ctrl', function($scope, AuthService, API_ENDPOINT, $http, $state) {
+    $scope.fitness_goals = [
+    // value is the value of the field to be used with logic
+    { text: "Overall Health & Wellness", value: "overall health & wellness" },
+    { text: "Build Muscle Mass", value: "build muscle mass" },
+    { text: "Lose Weight", value: "lose weight" }
+  ];
+})
  
 .controller('AppCtrl', function($scope, $state, $ionicPopup, AuthService, AUTH_EVENTS) {
   $scope.$on(AUTH_EVENTS.notAuthenticated, function(event) {

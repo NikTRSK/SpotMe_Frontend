@@ -51,6 +51,11 @@ angular.module('starter', ['ionic'])
     templateUrl: 'templates/createProfile.html',
     controller: 'CreateProfileCtrl'
   });
+  .state('createProfile2', {
+    url: '/createProfile2',
+    templateUrl: 'templates/createProfile2.html',
+    controller: 'CreateProfile2Ctrl'
+  });
   $urlRouterProvider.otherwise('/outside/login');
 })
  
