@@ -50,7 +50,7 @@ angular.module('starter', ['ionic'])
     url: '/createProfile',
     templateUrl: 'templates/createProfile.html',
     controller: 'CreateProfileCtrl'
-  });
+  })
   .state('createProfile2', {
     url: '/createProfile2',
     templateUrl: 'templates/createProfile2.html',
