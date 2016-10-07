@@ -64,7 +64,7 @@ angular.module('starter', ['ionic'])
 
     if (!AuthService.isAuthenticated()) {
       console.log(next.name);
-      if (next.name !== 'outside.login' && next.name !== 'outside.register' && next.name !== 'createProfile') { // testing only. take out last condition
+      if (next.name !== 'outside.login' && next.name !== 'outside.register' && next.name !== 'createProfile' && next.name !== 'createProfile2') { // testing only. take out last condition
         event.preventDefault();
         $state.go('outside.login');
       }
