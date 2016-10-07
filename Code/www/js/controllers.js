@@ -74,6 +74,20 @@ angular.module('starter')
     { text: "Lose Weight", value: "lose weight" }
   ];
 })
+
+.controller('pairingModeCtrl', function($scope, AuthService, API_ENDPOINT, $http, $state) {
+    $scope.fitness_goals = [
+    // value is the value of the field to be used with logic
+    
+  ];
+})
+
+.controller('pairingMode2Ctrl', function($scope, AuthService, API_ENDPOINT, $http, $state) {
+    $scope.fitness_goals = [
+    // value is the value of the field to be used with logic
+    
+  ];
+})
  
 .controller('AppCtrl', function($scope, $state, $ionicPopup, AuthService, AUTH_EVENTS) {
   $scope.$on(AUTH_EVENTS.notAuthenticated, function(event) {

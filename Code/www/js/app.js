@@ -55,6 +55,16 @@ angular.module('starter', ['ionic'])
     url: '/createProfile2',
     templateUrl: 'templates/createProfile2.html',
     controller: 'CreateProfile2Ctrl'
+  })
+  .state('pairingMode', {
+    url: '/pairingMode',
+    templateUrl: 'templates/pairingMode.html',
+    controller: 'pairingModeCtrl'
+  })
+  .state('pairingMode2', {
+    url: '/pairingMode2',
+    templateUrl: 'templates/pairingMode2.html',
+    controller: 'pairingMode2Ctrl'
   });
   $urlRouterProvider.otherwise('/outside/login');
 })
@@ -64,7 +74,7 @@ angular.module('starter', ['ionic'])
 
     if (!AuthService.isAuthenticated()) {
       console.log(next.name);
-      if (next.name !== 'outside.login' && next.name !== 'outside.register' && next.name !== 'createProfile' && next.name !== 'createProfile2') { // testing only. take out last condition
+      if (next.name !== 'outside.login' && next.name !== 'outside.register' && next.name !== 'createProfile' && next.name !== 'createProfile2' && next.name !== 'pairingMode' && next.name !== 'pairingMode2') { // testing only. take out last condition
         event.preventDefault();
         $state.go('outside.login');
       }
