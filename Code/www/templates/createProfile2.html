@@ -11,16 +11,12 @@
       <div class="row">
         <div class="form-group col-xs-6">
           <label for="firstname" class="sr-only">
-            <input id="firstname" class="form-control input-group-lg reg_name" type="text" name="firstname"
-            title="Enter first name"
-            placeholder="First Name"/>
+            <label>Jane</label>
           </label>
         </div>
         <div class="form-group col-xs-6">
           <label for="lastname" class="sr-only">
-            <input id="lastname" class="form-control input-group-lg reg_name" type="text" name="lastname"
-            title="Enter last name"
-            placeholder="Last Name"/>
+            <label>Doe</label>
           </label>
         </div>
       </div>
@@ -29,24 +25,25 @@
       <div class="row">
         <div class="form-group col-xs-6">
             <label for="lastname" class="sr-only"></label>
-              <input name="University" type="text" title="Enter university" placeholder="University"/>
+              <label>University of California- Los Angeles</label>
         </div>
         <div class="form-group col-xs-6">
             <label for="age" class="sr-only"></label>
-              <input name="Age" type="text" title="Enter age" placeholder="Age"/>
+              <label>20</label>
               </br>
         </div>
       </div>
 
-      <div class="pad-item"><label>Where are you today?</label></div>
+      <div class="pad-item"></div>
       <div class="list">
     <div>
       <label>
       <select>
-        <option selected>Height</option>
-        <option>6.0</option>
-        <option>6.1</option>
-        <option>6.2</option>
+        <option selected>Goal Weight</option>
+        <option>160</option>
+        <option>170</option>
+        <option>180</option>
+        <option>190</option>
       </select>
       </label>
       <label for="cb" class="pure-checkbox right-align">
@@ -54,28 +51,14 @@
       </label>
     </div>
 
-    <div>
-      <label>
-        <select>
-          <option selected>Weight</option>
-          <option>170</option>
-          <option>180</option>
-          <option>190</option>
-        </select>
-      </label>
-      <label for="cb" class="pure-checkbox right-align">
-        <input id="cb" type="checkbox" style="float: left; margin-top: 5px;"><div style="margin-left: 25px;">Do not show on profile</div>
-      </label>
-    </div>
-
     </br>
-    <div class="pad-item"><label>Fitness Level</label></div>
-    <div>
+    <div class="pad-item"><label>Where do you want to be?</label></div>
+    <div class="list">
       <ul>
         <form action="">
-          <input type="radio" name="FitnessLevel" value="Beginner"> Begineer<br>
-          <input type="radio" name="FitnessLevel" value="Intermediate"> Intermediate<br>
-          <input type="radio" name="FitnessLevel" value="Advanced"> Advanced<br>
+          <input type="radio" name="FitnessGoals" value="Overall Health & Wellness"> Overall Health & Wellness<br>
+          <input type="radio" name="FitnessGoals" value="Build Muscle Mass"> Build Muscle<br>
+          <input type="radio" name="FitnessGoals" value="Lose Weight"> Lose Weight<br>
         </form>
       </ul>
     </div>
