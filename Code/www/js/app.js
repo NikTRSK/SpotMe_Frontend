@@ -24,7 +24,7 @@ angular.module('starter', ['ionic'])
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
- 
+
   $stateProvider
   .state('outside', {
     url: '/outside',
@@ -51,11 +51,6 @@ angular.module('starter', ['ionic'])
     templateUrl: 'templates/createProfile.html',
     controller: 'CreateProfileCtrl'
   })
-  .state('createProfile2', {
-    url: '/createProfile2',
-    templateUrl: 'templates/createProfile2.html',
-    controller: 'CreateProfile2Ctrl'
-  })
   .state('pairingMode', {
     url: '/pairingMode',
     templateUrl: 'templates/pairingMode.html',
@@ -68,7 +63,8 @@ angular.module('starter', ['ionic'])
   });
   $urlRouterProvider.otherwise('/outside/login');
 })
- 
+
+
 .run(function ($rootScope, $state, AuthService, AUTH_EVENTS) {
   $rootScope.$on('$stateChangeStart', function (event,next, nextParams, fromState) {
 
