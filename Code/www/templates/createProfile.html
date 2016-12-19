@@ -4,6 +4,7 @@
         <h1 class="title">SpotMe</h1>
     </ion-header-bar>
     <ion-content has-header="true" padding="true">
+      <form id="signup-form" ng-submit="processForm()">
       <h3 class="center">Create Your Profile</h3>
       <div class="center"><img class= "profile_profilePic" src="../img/dummy_pic.jpg"></div>
 
@@ -45,40 +46,34 @@
       <div class="list">
     <div>
       <label>
-      <select>
-        <option selected>Height</option>
-        <option>6.0</option>
-        <option>6.1</option>
-        <option>6.2</option>
-      </select>
-      </label>
-      <label for="cb" class="pure-checkbox right-align">
-        <input id="cb" type="checkbox" style="float: left; margin-top: 5px;"><div style="margin-left: 25px;">Do not show on profile</div>
+        <label>
+          <select ng-model="formData.height" ng-options="x for x in heights">
+            <option style="display:none" value="">Height</option>
+          </select>
       </label>
     </div>
-
+        <label for="cb" class="pure-checkbox right-align">
+          <input id="cb" ng-model="formData.showHeightOnProfile" type="checkbox" style="float: left; margin-top: 5px;"><div style="margin-left: 25px;">Do not show on profile</div>
+        </label>
     <div>
       <label>
-        <select>
-          <option selected>Weight</option>
-          <option>170</option>
-          <option>180</option>
-          <option>190</option>
+        <select ng-model="formData.weight" ng-options="x for x in weights">
+          <option style="display:none" value="">Weight</option>
         </select>
       </label>
-      <label for="cb" class="pure-checkbox right-align">
-        <input id="cb" type="checkbox" style="float: left; margin-top: 5px;"><div style="margin-left: 25px;">Do not show on profile</div>
-      </label>
     </div>
+        <label for="cb" class="pure-checkbox right-align">
+          <input id="cb" ng-model="formData.showWeightOnProfile" type="checkbox" style="float: left; margin-top: 5px;"><div style="margin-left: 25px;">Do not show on profile</div>
+        </label>
 
     </br>
     <div class="pad-item"><label>Fitness Level</label></div>
     <div>
       <ul>
         <form action="">
-          <input type="radio" name="FitnessLevel" value="Beginner"> Begineer<br>
-          <input type="radio" name="FitnessLevel" value="Intermediate"> Intermediate<br>
-          <input type="radio" name="FitnessLevel" value="Advanced"> Advanced<br>
+          <input type="radio" name="FitnessLevel" value="Beginner" ng-model="formData.fitnessLevel"> Beginner<br>
+          <input type="radio" name="FitnessLevel" value="Intermediate" ng-model="formData.fitnessLevel"> Intermediate<br>
+          <input type="radio" name="FitnessLevel" value="Advanced" ng-model="formData.fitnessLevel"> Advanced<br>
         </form>
       </ul>
     </div>
@@ -88,7 +83,7 @@
         <div class="list">
           <div>
             <label>
-              <select>
+              <select ng-model="formData.goalWeight">
                 <option selected>Goal Weight</option>
                 <option>160</option>
                 <option>170</option>
@@ -107,11 +102,14 @@
           <div class="list">
             <ul>
               <form action="">
-                <input type="radio" name="FitnessGoals" value="Overall Health & Wellness"> Overall Health & Wellness<br>
-                <input type="radio" name="FitnessGoals" value="Build Muscle Mass"> Build Muscle<br>
-                <input type="radio" name="FitnessGoals" value="Lose Weight"> Lose Weight<br>
+                <input type="radio" name="FitnessGoals" value="Overall Health & Wellness" ng-model="formData.personalGoal"> Overall Health & Wellness<br>
+                <input type="radio" name="FitnessGoals" value="Build Muscle Mass" ng-model="formData.personalGoal"> Build Muscle<br>
+                <input type="radio" name="FitnessGoals" value="Lose Weight" ng-model="formData.personalGoal"> Lose Weight<br>
               </form>
             </ul>
           </div>
-
-    <a class="button icon-right ion-chevron-right button-calm" ng-submit="processForm()" style="float: right";>Submit</a>
+        <button type="submit" class="button icon-right ion-chevron-right button-calm" style="float: right";>Pairing</button>
+      </div>
+      </form>
+    </ion-content>
+  </ion-view>

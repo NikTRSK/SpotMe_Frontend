@@ -2,8 +2,9 @@
   <ion-view>
     <ion-header-bar class="bar-header">
         <h1 class="title">SpotMe</h1>
-    </ion-header-bar>    
+    </ion-header-bar>
     <ion-content has-header="true" padding="true">
+      <form id="pairing-mode" ng-submit="processPairingForm()">
       <h3 class="center">Pairing Mode</h3>
 
     </br>
@@ -11,9 +12,9 @@
     <div class="pad-item3">
       <ul>
         <form action="">
-          <input type="radio" name="WorkoutWith" value="Male"> Male<br>
-          <input type="radio" name="WorkoutWith" value="Female"> Female<br>
-          <input type="radio" name="WorkoutWith" value="Both"> Both<br>
+          <input type="radio" name="WorkoutWith" value="Male" ng-model="paringData.genderPreference"> Male<br>
+          <input type="radio" name="WorkoutWith" value="Female" ng-model="paringData.genderPreference"> Female<br>
+          <input type="radio" name="WorkoutWith" value="Both" ng-model="paringData.genderPreference"> Both<br>
         </form>
       </ul>
     </div>
@@ -23,11 +24,14 @@
     <div class="pad-item3">
       <ul>
         <form action="">
-          <input type="radio" name="WorkoutTime" value="ASAP"> ASAP<br>
-          <input type="radio" name="WorkoutTime" value="Tomorrow"> Tomorrow<br>
-          <input type="radio" name="WorkoutTime" value="This Week"> This Week<br>
+          <input type="radio" name="WorkoutTime" value="ASAP" ng-model="paringData.workoutTime"> ASAP<br>
+          <input type="radio" name="WorkoutTime" value="Tomorrow" ng-model="paringData.workoutTime"> Tomorrow<br>
+          <input type="radio" name="WorkoutTime" value="This Week" ng-model="paringData.workoutTime"> This Week<br>
         </form>
       </ul>
     </div>
 
-    <a class="button icon-right ion-chevron-right button-calm" ui-sref="pairingMode2" style="float: right";>Next</a>
+        <button type="submit" class="button icon-right ion-chevron-right button-calm" style="float: right";>Done</button>
+      </form>
+    </ion-content>
+  </ion-view>
