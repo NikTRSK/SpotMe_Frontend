@@ -77,24 +77,20 @@
         </form>
       </ul>
     </div>
-
-
         <div class="pad-item"></div>
         <div class="list">
           <div>
+            <br>
+          <div>
             <label>
-              <select ng-model="formData.goalWeight">
-                <option selected>Goal Weight</option>
-                <option>160</option>
-                <option>170</option>
-                <option>180</option>
-                <option>190</option>
+              <select ng-model="formData.goalWeight" ng-options="x for x in goalWeights">
+                <option style="display:none" value="">Goal Weight</option>
               </select>
-            </label>
-            <label for="cb" class="pure-checkbox right-align">
-              <input id="cb" type="checkbox" style="float: left; margin-top: 5px;"><div style="margin-left: 25px;">Do not show on profile</div>
-            </label>
           </div>
+          </label>
+          <label for="cb" class="pure-checkbox right-align">
+            <input id="cb" type="checkbox" style="float: left; margin-top: 5px;"><div style="margin-left: 25px;">Do not show on profile</div>
+          </label>
         </div>
 
           </br>

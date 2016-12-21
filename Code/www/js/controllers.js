@@ -27,11 +27,24 @@ angular.module('starter')
   $scope.signup = function() {
     AuthService.register($scope.user).then(function(msg) {
       // $state.go('outside.login');
-      $state.go('createProfile')
+
       var alertPopup = $ionicPopup.alert({
         title: 'Register success!',
         template: msg
       });
+
+      $scope.login = function() {
+        AuthService.login($scope.user).then(function(msg) {
+          $state.go('createProfile')
+        }, function(errMsg) {
+          var alertPopup = $ionicPopup.alert({
+            title: 'Login failed!',
+            template: errMsg
+          });
+        });
+      };
+
+      $scope.login();
     }, function(errMsg) {
       var alertPopup = $ionicPopup.alert({
         title: 'Register failed!',
@@ -71,6 +84,13 @@ angular.module('starter')
     "190", "191", "192", "193", "194", "195", "196", "197", "198", "199",
     "200", "201", "202", "203", "204", "205", "206", "207", "208", "209"];
 
+  $scope.goalWeights = [ "150", "151", "152", "153", "154", "155", "156", "157", "158", "159",
+    "160", "161", "162", "163", "164", "165", "166", "167", "168", "169",
+    "170", "171", "172", "173", "174", "175", "176", "177", "178", "179",
+    "180", "181", "182", "183", "184", "185", "186", "187", "188", "189",
+    "190", "191", "192", "193", "194", "195", "196", "197", "198", "199",
+    "200", "201", "202", "203", "204", "205", "206", "207", "208", "209"];
+
     $scope.fitness_level = [
     // value is the value of the field to be used with logic
     { text: "Beginner", value: "beginner" },
@@ -86,11 +106,12 @@ angular.module('starter')
 
   // process the form here
   $scope.processForm = function() {
-    console.log('we made it!!!');
-    console.log($scope.formData);
-    $state.go('pairingMode');
+    $http.put(API_ENDPOINT.url + '/accountInfo', $scope.formData).then(function(result) {
+      // $scope.memberinfo = result.data.msg;
+      console.log(result.data.msg);
+      $state.go('pairingMode');
+    });
   };
-
 })
 
 .controller('pairingModeCtrl', function($scope, AuthService, API_ENDPOINT, $http, $state) {
@@ -105,10 +126,11 @@ angular.module('starter')
 
   // process the form here
   $scope.processPairingForm = function() {
-    console.log('we made it!!!');
-    console.log($scope.paringData);
-    // $state.go('pairingMode');
-    console.log("here we need to go the matches page");
+    $http.put(API_ENDPOINT.url + '/accountInfo', $scope.paringData).then(function(result) {
+      console.log(result.data.msg);
+      console.log('going to matches screen');
+      // $state.go('pairingMode');
+    });
   };
 })
 
