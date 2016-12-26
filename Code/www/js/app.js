@@ -54,23 +54,35 @@ angular.module('starter', ['ionic', 'ionic.contrib.ui.tinderCards2'])
   .state('pairingMode', {
     url: '/pairingMode',
     templateUrl: 'templates/pairingMode.html',
-    controller: 'pairingModeCtrl'
+    controller: 'PairingModeCtrl'
   })
-  .state('pairingMode2', {
-    url: '/pairingMode2',
-    templateUrl: 'templates/pairingMode2.html',
-    controller: 'pairingMode2Ctrl'
+  .state('matches', {
+    url: '/matches',
+    templateUrl: 'templates/matches.html',
+    controller: 'MatchesCtrl'
   });
   $urlRouterProvider.otherwise('/outside/login');
 })
 
+  .directive('noScroll', function($document) {
+
+    return {
+      restrict: 'A',
+      link: function($scope, $element, $attr) {
+
+        $document.on('touchmove', function(e) {
+          e.preventDefault();
+        });
+      }
+    }
+  })
 
 .run(function ($rootScope, $state, AuthService, AUTH_EVENTS) {
   $rootScope.$on('$stateChangeStart', function (event,next, nextParams, fromState) {
 
     if (!AuthService.isAuthenticated()) {
       console.log(next.name);
-      if (next.name !== 'outside.login' && next.name !== 'outside.register' && next.name !== 'createProfile' && next.name !== 'createProfile2' && next.name !== 'pairingMode' && next.name !== 'pairingMode2') { // testing only. take out last condition
+      if (next.name !== 'outside.login' && next.name !== 'outside.register' && next.name !== 'createProfile' && next.name !== 'createProfile2' && next.name !== 'pairingMode' && next.name !== 'matches') { // testing only. take out last condition
         event.preventDefault();
         $state.go('outside.login');
       }
