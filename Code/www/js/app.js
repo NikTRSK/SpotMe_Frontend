@@ -60,6 +60,11 @@ angular.module('starter', ['ionic', 'ionic.contrib.ui.tinderCards2', 'ngCordova'
     url: '/matches',
     templateUrl: 'templates/matches.html',
     controller: 'MatchesCtrl'
+  })
+  .state('chatBox', {
+    url: '/chatBox',
+    templateUrl: 'templates/chatBox.html',
+    controller: 'ChatBoxCtrl'
   });
   $urlRouterProvider.otherwise('/outside/login');
 })
@@ -82,7 +87,7 @@ angular.module('starter', ['ionic', 'ionic.contrib.ui.tinderCards2', 'ngCordova'
 
     if (!AuthService.isAuthenticated()) {
       console.log(next.name);
-      if (next.name !== 'outside.login' && next.name !== 'outside.register' && next.name !== 'createProfile' && next.name !== 'createProfile2' && next.name !== 'pairingMode' && next.name !== 'matches') { // testing only. take out last condition
+      if (next.name !== 'outside.login' && next.name !== 'outside.register' && next.name !== 'createProfile' && next.name !== 'createProfile2' && next.name !== 'pairingMode' && next.name !== 'matches' && next.name !== 'chatBox') { // testing only. take out last condition
         event.preventDefault();
         $state.go('outside.login');
       }
