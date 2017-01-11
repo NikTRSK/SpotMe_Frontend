@@ -8,7 +8,7 @@ angular.module('starter')
 
   $scope.login = function() {
     AuthService.login($scope.user).then(function(msg) {
-      $state.go('inside');
+      $state.go('matches');
     }, function(errMsg) {
       var alertPopup = $ionicPopup.alert({
         title: 'Login failed!',
@@ -134,7 +134,16 @@ angular.module('starter')
   };
 })
 
-  .controller('MatchesCtrl', function($scope, TDCardDelegate, $timeout) {
+  .controller('MatchesCtrl', function($http, $scope, TDCardDelegate, $timeout, API_ENDPOINT) {
+
+    $scope.matches = [];
+
+    $http.put(API_ENDPOINT.url + '/getMatches', $scope.formData).then(function(result) {
+      // $scope.memberinfo = result.data.msg;
+      console.log(result.data.msg);
+        console.log($scope.matches);
+      $scope.matches = result.data;
+    });
 
     var cardTypes = [
       { image: 'http://c4.staticflickr.com/4/3924/18886530069_840bc7d2a5_n.jpg' },
@@ -146,6 +155,9 @@ angular.module('starter')
       { image: 'http://c1.staticflickr.com/1/267/19067097362_14d8ed9389_n.jpg' }
     ];
 
+    //setup initial card
+    // if user not in matched array return
+    // else return the user
 
     $scope.cards = {
       master: Array.prototype.slice.call(cardTypes, 0),
@@ -186,6 +198,7 @@ angular.module('starter')
       console.log('RIGHT SWIPE');
       var card = $scope.cards.active[index];
       $scope.cards.liked.push(card);
+      // send http request with username and user liked
     };
 
   })
