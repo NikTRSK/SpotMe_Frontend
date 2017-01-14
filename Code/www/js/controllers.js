@@ -146,7 +146,7 @@ angular.module('starter')
   $http.put(API_ENDPOINT.url + '/getMatches', $scope.formData).then(function(result) {
     // $scope.memberinfo = result.data.msg;
     console.log(result.data.msg);
-      console.log($scope.matches);
+    console.log($scope.matches);
     $scope.matches = result.data;
   });
 
