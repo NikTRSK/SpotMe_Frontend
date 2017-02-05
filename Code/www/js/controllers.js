@@ -72,6 +72,9 @@ angular.module('starter')
 })
 
 .controller('CreateProfileCtrl', function($scope, AuthService, API_ENDPOINT, $http, $state) {
+  // store all of the form data
+  $scope.formData = {};
+
   $scope.heights = [ "4.0", "4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "4.8", "4.9", "4.10", "4.11",
     "5.0", "5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7", "5.8", "5.9", "5.10", "5.11",
     "6.0", "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "6.7", "6.8", "6.9", "6.10", "6.11",
@@ -101,13 +104,9 @@ angular.module('starter')
     { text: "Lose Weight", value: "lose weight" }
   ];
 
-  // store all of the form data
-  $scope.formData = {};
-
   // process the form here
   $scope.processForm = function() {
-    $http.put(API_ENDPOINT.url + '/accountInfo', $scope.formData).then(function(result) {
-      // $scope.memberinfo = result.data.msg;
+    $http.put(API_ENDPOINT.url + '/accountInfo', ($scope.formData)).then(function(result) {
       console.log(result.data.msg);
       $state.go('pairingMode');
     });
@@ -115,6 +114,8 @@ angular.module('starter')
 })
 
 .controller('PairingModeCtrl', function($scope, AuthService, API_ENDPOINT, $http, $state) {
+  // store all of the form data
+  $scope.formData = {};
     $scope.months = ["January - 01", "February - 02", "March - 03", "April - 04", "May - 05",
     "June - 06", "July - 07", "August - 08", "September - 09", "October - 10", "November - 11",
     "December - 12"];
@@ -126,12 +127,11 @@ angular.module('starter')
     $scope.years = ["2017", "2018", "2019", "2020"];
 
     console.log("in pairing");
-  // store all of the form data
-  $scope.paringData = {};
 
   // process the form here
   $scope.processPairingForm = function() {
-    $http.put(API_ENDPOINT.url + '/accountInfo', $scope.paringData).then(function(result) {
+    // console.log(pairingPost);
+    $http.put(API_ENDPOINT.url + '/accountInfo', ($scope.formData)).then(function(result) {
       console.log(result.data.msg);
       console.log('going to matches screen');
       // $state.go('pairingMode');

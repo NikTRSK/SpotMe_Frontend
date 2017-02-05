@@ -9,19 +9,9 @@
 
     </br>
 
-    <!-- <div class="pad-item2"><label>Who would you like to workout with?</label></div>
-    <div class="pad-item3">
-      <ul>
-        <form action="">
-          <input type="radio" name="WorkoutWith" value="Male" ng-model="paringData.genderPreference"> Male<br>
-          <input type="radio" name="WorkoutWith" value="Female" ng-model="paringData.genderPreference"> Female<br>
-          <input type="radio" name="WorkoutWith" value="Both" ng-model="paringData.genderPreference"> Both<br>
-        </form>
-      </ul>
-    </div> -->
-
     <div class="pad-item"><label>Who would you like to workout with?</label></div>
-          <ion-list>
+          <ion-list [ng-model]="formData.genderPreference">
+            <div>
             <li class="item item-checkbox">
                Male
                <label class="checkbox">
@@ -40,59 +30,32 @@
                <input type="checkbox">
                </label>
             </li>
+            </div>
           </ion-list>
-
     </br>
-    <!-- <div class="pad-item2"><label>When would you like to workout?</label></div>
-    <div class="pad-item3">
-      <ul>
-        <form action="">
-          <input type="radio" name="WorkoutTime" value="ASAP" ng-model="paringData.workoutTime"> ASAP<br>
-          <input type="radio" name="WorkoutTime" value="Tomorrow" ng-model="paringData.workoutTime"> Tomorrow<br>
-          <input type="radio" name="WorkoutTime" value="This Week" ng-model="paringData.workoutTime"> This Week<br>
-        </form>
-      </ul>
-    </div> -->
 
     <div class="pad-item"><label>When would you like to workout?</label></div>
-          <!-- <ion-list>
-            <li class="item item-checkbox">
-               As Soon As Possible (ASAP)
-               <label class="checkbox">
-               <input type="checkbox">
-               </label>
-            </li>
-            <li class="item item-checkbox">
-               Tomorrow
-               <label class="checkbox">
-               <input type="checkbox">
-               </label>
-            </li>
-            <li class="item item-checkbox">
-               This Week
-               <label class="checkbox">
-               <input type="checkbox">
-               </label>
-            </li>
-          </ion-list> -->
 
-    <div class="list">
-        <label class="item item-input item-select">
-          <div class="input-label">Month</div>
-          <select ng-model="formData.month" ng-options="x for x in months">
-          </select>
-        </label>
-        <label class="item item-input item-select">
-          <div class="input-label">Day</div>
-          <select ng-model="formData.day" ng-options="x for x in days">
-          </select>
-        </label>
-        <label class="item item-input item-select">
-          <div class="input-label">Year</div>
-          <select ng-model="formData.year" ng-options="x for x in years">
-          </select>
-        </label>
-    </div>
+        <ion-list ng-model="formData.workoutTime">
+          <li class="item item-checkbox">
+            ASAP
+            <label class="checkbox">
+              <input type="checkbox">
+            </label>
+          </li>
+          <li class="item item-checkbox">
+            Tomorrow
+            <label class="checkbox">
+              <input type="checkbox">
+            </label>
+          </li>
+          <li class="item item-checkbox">
+            This Week
+            <label class="checkbox">
+              <input type="checkbox">
+            </label>
+          </li>
+        </ion-list>
 
         <button type="submit" class="button icon-right ion-chevron-right button-calm" style="float: right";>Done</button>
       </form>
