@@ -114,27 +114,29 @@ angular.module('starter')
 })
 
 .controller('PairingModeCtrl', function($scope, AuthService, API_ENDPOINT, $http, $state) {
-  // store all of the form data
-  $scope.formData = {};
-    $scope.months = ["January - 01", "February - 02", "March - 03", "April - 04", "May - 05",
-    "June - 06", "July - 07", "August - 08", "September - 09", "October - 10", "November - 11",
-    "December - 12"];
 
-    $scope.days = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14",
-    "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29",
-    "30", "31"];
+  $scope.gender = [
+    { text: "Male", value: "male" },
+    { text: "Female", value: "female" },
+    { text: "Both", value: "both" }
+  ];
 
-    $scope.years = ["2017", "2018", "2019", "2020"];
+  $scope.time = [
+    { text: "ASAP", value: "asap" },
+    { text: "Tomorrow", value: "tomorrow" },
+    { text: "This Week", value: "this week" }
+  ];
 
-    console.log("in pairing");
+  $scope.data = {
+    // clientSide: 'ng'
+  };
 
   // process the form here
   $scope.processPairingForm = function() {
-    // console.log(pairingPost);
-    $http.put(API_ENDPOINT.url + '/accountInfo', ($scope.formData)).then(function(result) {
+    console.log($scope.data);
+    $http.put(API_ENDPOINT.url + '/accountInfo', ($scope.data)).then(function(result) {
       console.log(result.data.msg);
       console.log('going to matches screen');
-      // $state.go('pairingMode');
     });
   };
 })
