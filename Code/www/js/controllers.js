@@ -127,6 +127,19 @@ angular.module('starter')
     { text: "This Week", value: "this week" }
   ];
 
+
+  //CHANGE START
+  $scope.months = ["January - 01", "February - 02", "March - 03", "April - 04", "May - 05",
+    "June - 06", "July - 07", "August - 08", "September - 09", "October - 10", "November - 11",
+    "December - 12"];
+
+    $scope.days = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14",
+    "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29",
+    "30", "31"];
+
+    $scope.years = ["2017", "2018", "2019", "2020"];
+  //CHANGE END
+
   $scope.data = {
     // clientSide: 'ng'
   };
@@ -346,19 +359,18 @@ angular.module('starter')
 
   $scope.hideTime = true;
 
-  var alternate,
-    isIOS = ionic.Platform.isWebView() && ionic.Platform.isIOS();
+  var isIOS = ionic.Platform.isWebView() && ionic.Platform.isIOS();
 
   $scope.sendMessage = function() {
-    alternate = !alternate;
+    // alternate = !alternate;
 
     var d = new Date();
     d = d.toLocaleTimeString().replace(/:\d+ /, ' ');
 
     $scope.messages.push({
       //userId: alternate ? '12345' : '54321',
-      userId: '12345',
-	  text: $scope.data.message,
+      // userId: '12345',
+	    text: $scope.data.message,
       time: d
     });
 

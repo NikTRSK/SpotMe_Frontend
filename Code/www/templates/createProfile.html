@@ -6,22 +6,44 @@
         <h1 class="title">SpotMe</h1>
     </ion-header-bar>  -->
 
-    <div class="bar bar-header bar-energized">
-        <h1 class="title">SpotMe</h1>
-    </div>
+    <ion-header-bar class="bar bar-header bColorMain">
+        <h1 class="title">Create Your Profile</h1>
+    </ion-header-bar>
 
     <form id="signup-form" ng-submit="processForm()">
 
-  <ion-content has-header="true" padding="true">
-      <h3 class="center">Create Your Profile</h3>
+  <ion-content class="bColor" has-header="true" padding="true">
+      <!-- <h3 class="center">Create Your Profile</h3> -->
+      <button class="button icon-left ion-chevron-left button-clear button-dark" ui-sref="outside.register";>Back</button>
+<!--       <button type="submit" class="button icon-right ion-chevron-right button-clear button-dark" style="float: right" ui-sref="pairingMode";>Next</button> -->
       <div class="center"><img class= "profile_profilePic" src="../img/dummy_pic.jpg"></div>
         <div id="imageuploader" ng-controller="ImageCtrl">
-          <button class="button button-full button-energized" ng-click="addMedia()">
+          <button class="button button-full bColorMain" ng-click="addMedia()">
             Add image
           </button>
         </div>
       <!-- Name Input -->
-      <div class="row">
+      <!-- University Input -->
+       <div class="pad-item"><label>General Information</label></div>
+       <div class="list">
+          <label class="item item-input">
+            <input type="text" placeholder="First Name">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="Last Name">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="Date of Birth (MM/DD/YYYY)">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="University">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="School Year">
+          </label>
+        </div>
+
+      <!-- <div class="row">
         <div class="form-group col-xs-6">
           <label for="firstname" class="sr-only">
             <input id="firstname" class="form-control input-group-lg reg_name" type="text" name="firstname"
@@ -36,10 +58,9 @@
             placeholder="Last Name"/>
           </label>
         </div>
-      </div>
+      </div> -->
 
-      <!-- University Input -->
-      <div class="row">
+      <!-- <div class="row">
         <div class="form-group col-xs-6">
             <label for="lastname" class="sr-only">
               <input name="University" type="text" title="Enter university" ng-model="formData.school"
@@ -52,10 +73,9 @@
               </br>
             </label>
         </div>
-      </div>
+      </div> -->
 
       <div class="pad-item"><label>Where are you today?</label></div>
-      <div class="list">
 
     <!-- <div>
       <label>
@@ -82,6 +102,17 @@
            <input type="checkbox">
            </label>
         </li>
+        <label class="item item-input item-select">
+          <div class="input-label">Weight</div>
+          <select ng-model="formData.weight" ng-options="x for x in weights">
+          </select>
+        </label>
+        <li class="item item-checkbox">
+           Do not show on profile
+           <label class="checkbox">
+           <input type="checkbox">
+           </label>
+        </li>
     </div>
 
     <!-- <div>
@@ -96,19 +127,7 @@
           <input id="cb" ng-model="formData.showWeightOnProfile" type="checkbox" style="float: left; margin-top: 5px;"><div style="margin-left: 25px;">Do not show on profile</div>
         </label> -->
 
-    <div class="list">
-        <label class="item item-input item-select">
-          <div class="input-label">Weight</div>
-          <select ng-model="formData.weight" ng-options="x for x in weights">
-          </select>
-        </label>
-        <li class="item item-checkbox">
-           Do not show on profile
-           <label class="checkbox">
-           <input type="checkbox">
-           </label>
-        </li>
-    </div>
+   
 
     </br>
 
@@ -124,49 +143,29 @@
     </div> -->
 
     <div class="pad-item"><label>Fitness Level</label></div>
-<!--    <div class="list">
-     <label class="item item-checkbox">
+    <div class="list">
+     <label class="item item-radio">
         <input type="radio" name="group">
         <div class="item-content">
            Beginner
         </div>
-       &lt;!&ndash; <i class="radio-icon ion-checkmark"></i>&ndash;&gt;
+        <i class="radio-icon ion-checkmark"></i>
      </label>
-     <label class="item item-checkbox">
+     <label class="item item-radio">
         <input type="radio" name="group">
         <div class="item-content">
            Intermediate
         </div>
         <i class="radio-icon ion-checkmark"></i>
      </label>
-     <label class="item item-checkbox">
+     <label class="item item-radio">
         <input type="radio" name="group">
         <div class="item-content">
            Advanced
         </div>
         <i class="radio-icon ion-checkmark"></i>
      </label>
-    </div>-->
-        <ion-list>
-          <li class="item item-checkbox">
-            Beginner
-            <label class="checkbox">
-              <input type="radio" name="group">
-            </label>
-          </li>
-          <li class="item item-checkbox">
-            Intermediate
-            <label class="checkbox">
-              <input type="radio" name="group">
-            </label>
-          </li>
-          <li class="item item-checkbox">
-            Advanced
-            <label class="checkbox">
-              <input type="radio" name="group">
-            </label>
-          </li>
-        </ion-list>
+    </div>
 
         <!-- <div class="pad-item"></div>
         <div class="list">
@@ -233,7 +232,9 @@
             </li>
           </ion-list>
 
-        <button type="submit" class="button icon-right ion-chevron-right button-calm" style="float: right"> <!--ui-sref="pairingMode";-->Next</button>
+<!--         <button class="button icon-left ion-chevron-left button-clear button-dark" ui-sref="outside.register";>Back</button>-->
+        <button type="submit" class="button icon-right ion-chevron-right button-clear button-dark" style="float: right" ui-sref="pairingMode";>Next</button>
+
       </div>
       </form>
     </ion-content>

@@ -1,19 +1,25 @@
-<ion-view title="Please sign in">
-  <ion-content class="padding">
+<ion-view>
+  <ion-content class="padding bColorMain">
+    <div class="center"><img class= "logoPic" src="../img/logo.jpg"></div>
+
   <div class="list">
-    <label class="item item-input">
+    <label class="item item-input bColor">
       <input type="text" placeholder="Name" ng-model="user.name">
     </label>
-    <label class="item item-input">
+    <label class="item item-input bColor">
       <input type="password" placeholder="Password" ng-model="user.password">
     </label>
   </div>
-  <button class="button button-full button-balanced" ng-click="login()">
+  <button class="button button-full button-energized" ng-click="login()">
     Login
   </button>
-  <button class="button button-positive button-clear button-full" ui-sref="outside.register">Register now!</button>
- <!--  <button class="button button-positive button-clear button-full" ui-sref="createProfile">Create Profile (testing only)</button> -->
-    <button class="button button-positive button-clear button-full" ui-sref="matches">Matches (testing only)</button>
-	<button class="button button-positive button-clear button-full" ui-sref="chatBox">Chat (testing only)</button>
+  <button class="button button-full button-energized" ui-sref="outside.register">
+    Register
+  </button>
+<!--   <button class="button button-positive button-clear button-full" ui-sref="outside.register">Register now!</button>
+ --> <!--  <button class="button button-positive button-clear button-full" ui-sref="createProfile">Create Profile (testing only)</button> -->
+  <button class="button button-positive button-clear button-full" ui-sref="userProfile">Profile (testing only)</button>
+  <button class="button button-positive button-clear button-full" ui-sref="matches">Matches (testing only)</button>
+  <button class="button button-positive button-clear button-full" ui-sref="chatBox">Chat (testing only)</button>
   </ion-content>
 </ion-view>

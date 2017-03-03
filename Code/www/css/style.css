@@ -11,9 +11,21 @@ body, html{
     background-color: #F6594A;
     color: orange;
 }
+.bColor{
+  background-color: #D1CFCA;
+}
+
+.bColorMain{
+  color : #30393A !important;
+  background-color: #00ccc2 !important;
+}
+
+.datafoot{
+  height: 180px !important;
+}
+
 .center {
   text-align: center
-}
 }
 .right-align {
   float: right
@@ -50,7 +62,7 @@ body, html{
     background: #DC143C;
 }
 .round-button a {
-    display:block;
+  display:block;
   float:left;
   width:100%;
   padding-top:50%;
@@ -78,6 +90,12 @@ body, html{
 .profile_profilePic {
   height: 200px;
   width: 200px;
+  float: center;
+}
+
+.logoPic {
+  height: 140px;
+  width: 350px;
   float: center;
 }
 
@@ -316,7 +334,7 @@ $stable:                          #f8f8f8 !default;
     transform: translate3d(130px, 0, 0) !important;
   }
 }
-//This will change
+/*This will change*/
 .messages.other {
   .message {
     -webkit-transform: translate3d(0, 0, 0) !important;
