@@ -10,7 +10,7 @@
       <input type="password" placeholder="Password" ng-model="user.password">
     </label>
   </div>
-  <button class="button button-full button-energized" ng-click="login()">
+  <button class="button button-full button-energized" ng-click="login()" ui-sref="mainMenu">
     Login
   </button>
   <button class="button button-full button-energized" ui-sref="outside.register">
@@ -18,7 +18,7 @@
   </button>
 <!--   <button class="button button-positive button-clear button-full" ui-sref="outside.register">Register now!</button>
  --> <!--  <button class="button button-positive button-clear button-full" ui-sref="createProfile">Create Profile (testing only)</button> -->
-  <button class="button button-positive button-clear button-full" ui-sref="userProfile">Profile (testing only)</button>
+  <button class="button button-positive button-clear button-full" ui-sref="profile">Profile (testing only)</button>
   <button class="button button-positive button-clear button-full" ui-sref="matches">Matches (testing only)</button>
   <button class="button button-positive button-clear button-full" ui-sref="chatBox">Chat (testing only)</button>
   <button class="button button-positive button-clear button-full" ui-sref="chatMatchList">Chat List (testing only)</button>

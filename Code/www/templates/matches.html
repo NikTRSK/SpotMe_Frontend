@@ -27,6 +27,7 @@
 <body ng-app="starter" no-scroll>-->
 <ion-pane class="bColor">
   <ion-header-bar class="bar bColorMain">
+     <button class="button icon-left ion-chevron-left button-clear button-dark" ui-sref="mainMenu";>Back</button>
     <h1 class="title">Pairing</h1>
   </ion-header-bar>
 
@@ -78,7 +79,7 @@
 
   <ion-footer-bar class="bColorMain datafoot">
     <h3 class="row">
-      <div class="col col-50">First Last, Age</div>
+      <div class="col col-50">{{ cardTypes.firstName }} {{ card.lastName }}</div>
     </h3>
   </ion-footer-bar>
 

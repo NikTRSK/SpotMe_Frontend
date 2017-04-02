@@ -1,0 +1,92 @@
+<!-- <script id="home.html" type="text/ng-template"> -->
+  <link href="http://code.ionicframework.com/1.0.0/css/ionic.min.css" rel="stylesheet">
+  <script src="http://code.ionicframework.com/1.0.0/js/ionic.bundle.js"></script>
+  <ion-view>
+    <!-- <ion-header-bar class="bar-header">
+        <h1 class="title">SpotMe</h1>
+    </ion-header-bar>  -->
+
+    <ion-header-bar class="bar bar-header bColorMain">
+        <h1 class="title">My Profile</h1>
+    </ion-header-bar>
+
+    <form id="signup-form" ng-submit="processForm()">
+
+  <ion-content class="bColor" has-header="true" padding="true">
+      <button class="button icon-left ion-chevron-left button-clear button-dark" ui-sref="mainMenu";>Back</button>
+
+      <div class="center">
+        <a ng-repeat="item in items">
+          <img ng-src="{{ item.image }}">
+        </a>
+      </div>
+
+        <div id="imageuploader" ng-controller="ImageCtrl">
+          <button class="button button-full bColorMain" ng-click="addMedia()">
+            Change Profile Picture
+          </button>
+        </div>
+
+        <div>
+          <button class="button button-full bColorMain" ui-sref="editProfile">
+            Edit Profile Information
+          </button>
+        </div>
+
+      <!-- Name Input -->
+      <!-- University Input -->
+      <div class="pad-item"><h3>General Information</h3></div>
+      <div>
+        <a ng-repeat="item in items">
+          <h4>First Name: {{ item.firstName }}</h4>
+          <h4>Last Name: {{ item.lastName }}</h4>
+          <h4>Date of Birth: {{ item.DOB }}</h4>
+          <h4>University: {{ item.university }}</h4>
+          <h4>School Year: {{ item.schoolYear }}</h4>
+        </a>
+      </div>
+
+      </br>
+
+      <div class="pad-item"><h3>Where are you today?</h3></div>
+      <div>
+        <a ng-repeat="item in items">
+          <h4>Height: {{ item.height }} Ft</h4>
+          <h4>Do not show on profile: {{ item.DNSH }}</h4>
+          <h4>Weight: {{ item.weight }} Lbs</h4>
+          <h4>Do not show on profile: {{ item.DNSW }}</h4>
+        </a>
+      </div>
+
+      </br>
+
+      <div class="pad-item"><h3>Fitness Level</h3></div>
+      <div>
+        <a ng-repeat="item in items">
+          <h4>{{ item.fitnessLevel }}</h4>
+        </a>
+      </div>
+
+      </br>
+
+      <div class="pad-item"><h3>Goal Weight</h3></div>
+      <div>
+        <a ng-repeat="item in items">
+          <h4>Goal Weight: {{ item.goalWeight }} Lbs</h4>
+          <h4>Do not show on profile: {{ item.DNSGW }}</h4>
+        </a>
+      </div>
+
+      </br>
+
+      <div class="pad-item"><h3>Where do you want to be?</h3></div>
+      <div>
+        <a ng-repeat="item in items">
+          <h4>{{ item.wdywtb }} Lbs</h4>
+        </a>
+      </div>
+
+    </div>
+      </form>
+    </ion-content>
+  </ion-view>

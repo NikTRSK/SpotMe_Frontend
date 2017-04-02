@@ -1,0 +1,151 @@
+<!-- <script id="home.html" type="text/ng-template"> -->
+  <link href="http://code.ionicframework.com/1.0.0/css/ionic.min.css" rel="stylesheet">
+  <script src="http://code.ionicframework.com/1.0.0/js/ionic.bundle.js"></script>
+  <ion-view>
+    <!-- <ion-header-bar class="bar-header">
+        <h1 class="title">SpotMe</h1>
+    </ion-header-bar>  -->
+
+    <ion-header-bar class="bar bar-header bColorMain">
+        <h1 class="title">My Profile</h1>
+    </ion-header-bar>
+
+    <form id="signup-form" ng-submit="processForm()">
+
+  <ion-content class="bColor" has-header="true" padding="true">
+      <button class="button icon-left ion-chevron-left button-clear button-dark" ui-sref="mainMenu";>Back</button>
+
+      <div class="center">
+        <a ng-repeat="item in items">
+          <img ng-src="{{ item.image }}">
+        </a>
+      </div>
+
+        <div id="imageuploader" ng-controller="ImageCtrl">
+          <button class="button button-full bColorMain" ng-click="addMedia()">
+            Change Profile Picture
+          </button>
+        </div>
+
+      <!-- Name Input -->
+      <!-- University Input -->
+      <div class="pad-item"><h3>General Information</h3></div>
+       <label class="item item-input">
+            <input type="text" placeholder="First Name">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="Last Name">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="Date of Birth (MM/DD/YYYY)">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="University">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="School Year">
+          </label>
+      <div>
+
+      </br>
+
+      <div class="pad-item"><h3>Where are you today?</h3></div>
+      <div class="list">
+        <label class="item item-input item-select">
+          <div class="input-label">Height</div>
+          <select ng-model="formData.height" ng-options="x for x in heights">
+          </select>
+        </label>
+        <li class="item item-checkbox">
+           Do not show on profile
+           <label class="checkbox">
+           <input type="checkbox">
+           </label>
+        </li>
+        <label class="item item-input item-select">
+          <div class="input-label">Weight</div>
+          <select ng-model="formData.weight" ng-options="x for x in weights">
+          </select>
+        </label>
+        <li class="item item-checkbox">
+           Do not show on profile
+           <label class="checkbox">
+           <input type="checkbox">
+           </label>
+        </li>
+      </div>
+
+
+      </br>
+
+      <div class="pad-item"><h3>Fitness Level</h3></div>
+      <div class="list">
+       <label class="item item-radio">
+          <input type="radio" name="group">
+          <div class="item-content">
+             Beginner
+          </div>
+          <i class="radio-icon ion-checkmark"></i>
+       </label>
+       <label class="item item-radio">
+          <input type="radio" name="group">
+          <div class="item-content">
+             Intermediate
+          </div>
+          <i class="radio-icon ion-checkmark"></i>
+       </label>
+       <label class="item item-radio">
+          <input type="radio" name="group">
+          <div class="item-content">
+             Advanced
+          </div>
+          <i class="radio-icon ion-checkmark"></i>
+       </label>
+      </div>
+
+      </br>
+
+      <div class="pad-item"><h3>Goal Weight</h3></div>
+      <div class="list">
+        <label class="item item-input item-select">
+          <div class="input-label">Goal Weight</div>
+          <select ng-model="formData.goalWeight" ng-options="x for x in goalWeights">
+          </select>
+        </label>
+        <li class="item item-checkbox">
+           Do not show on profile
+           <label class="checkbox">
+           <input type="checkbox">
+           </label>
+        </li>
+      </div>
+
+      </br>
+
+      <div class="pad-item"><h3>Where do you want to be?</h3></div>
+      <ion-list>
+        <li class="item item-checkbox">
+           Overall Health and Fitness
+           <label class="checkbox">
+           <input type="checkbox">
+           </label>
+        </li>
+        <li class="item item-checkbox">
+           Build Muscle Mass
+           <label class="checkbox">
+           <input type="checkbox">
+           </label>
+        </li>
+        <li class="item item-checkbox">
+           Lose Weight
+           <label class="checkbox">
+           <input type="checkbox">
+           </label>
+        </li>
+      </ion-list>
+
+      <button type="submit" class="button icon-right ion-chevron-right button-clear button-dark" style="float: right" ui-sref="profile";>Update</button>
+
+      </form>
+    </ion-content>
+  </ion-view>
