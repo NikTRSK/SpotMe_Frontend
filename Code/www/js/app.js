@@ -61,6 +61,11 @@ angular.module('starter', ['ionic', 'ionic.contrib.ui.tinderCards2', 'ngCordova'
     templateUrl: 'templates/pairingMode.html',
     controller: 'PairingModeCtrl'
   })
+  .state('editPairing', {
+    url: '/editPairing',
+    templateUrl: 'templates/editPairing.html',
+    controller: 'PairingModeCtrl'
+  })
   .state('matches', {
     url: '/matches',
     templateUrl: 'templates/matches.html',
@@ -74,7 +79,7 @@ angular.module('starter', ['ionic', 'ionic.contrib.ui.tinderCards2', 'ngCordova'
   .state('chatMatchList', {
     url: '/chatMatchList',
     templateUrl: 'templates/chatMatchList.html',
-    controller: 'ChatMatchListCtrl'
+    controller: 'ChatBoxCtrl'
   })
   .state('profile', {
     url: '/profile',
@@ -108,7 +113,7 @@ angular.module('starter', ['ionic', 'ionic.contrib.ui.tinderCards2', 'ngCordova'
 
     if (!AuthService.isAuthenticated()) {
       console.log(next.name);
-      if (next.name !== 'outside.login' && next.name !== 'outside.register' && next.name !== 'createProfile' && next.name !== 'editProfile' && next.name !== 'createProfile2' && next.name !== 'pairingMode' && next.name !== 'matches' && next.name !== 'chatBox' && next.name !== 'chatMatchList' && next.name !== 'profile' && next.name !== 'mainMenu') { // testing only. take out last condition
+      if (next.name !== 'outside.login' && next.name !== 'outside.register' && next.name !== 'createProfile' && next.name !== 'editProfile' && next.name !== 'createProfile2' && next.name !== 'pairingMode' && next.name !== 'editPairing' && next.name !== 'matches' && next.name !== 'chatBox' && next.name !== 'chatMatchList' && next.name !== 'profile' && next.name !== 'mainMenu') { // testing only. take out last condition
         event.preventDefault();
         $state.go('outside.login');
       }

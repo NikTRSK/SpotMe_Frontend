@@ -2,9 +2,6 @@
   <link href="http://code.ionicframework.com/1.0.0/css/ionic.min.css" rel="stylesheet">
   <script src="http://code.ionicframework.com/1.0.0/js/ionic.bundle.js"></script>
   <ion-view>
-    <!-- <ion-header-bar class="bar-header">
-        <h1 class="title">SpotMe</h1>
-    </ion-header-bar>  -->
 
     <ion-header-bar class="bar bar-header bColorMain">
         <h1 class="title">Create Your Profile</h1>
@@ -15,7 +12,7 @@
   <ion-content class="bColor" has-header="true" padding="true">
       <!-- <h3 class="center">Create Your Profile</h3> -->
       <button class="button icon-left ion-chevron-left button-clear button-dark" ui-sref="outside.register";>Back</button>
-<!--       <button type="submit" class="button icon-right ion-chevron-right button-clear button-dark" style="float: right" ui-sref="pairingMode";>Next</button> -->
+
       <div class="center"><img class= "profile_profilePic" src="../img/dummy_pic.jpg"></div>
         <div id="imageuploader" ng-controller="ImageCtrl">
           <button class="button button-full bColorMain" ng-click="addMedia()">
@@ -43,52 +40,7 @@
           </label>
         </div>
 
-      <!-- <div class="row">
-        <div class="form-group col-xs-6">
-          <label for="firstname" class="sr-only">
-            <input id="firstname" class="form-control input-group-lg reg_name" type="text" name="firstname"
-            title="Enter first name" ng-model="formData.firstName"
-            placeholder="First Name"/>
-          </label>
-        </div>
-        <div class="form-group col-xs-6">
-          <label for="lastname" class="sr-only">
-            <input id="lastname" class="form-control input-group-lg reg_name" type="text" name="lastname"
-            title="Enter last name" ng-model="formData.lastName"
-            placeholder="Last Name"/>
-          </label>
-        </div>
-      </div> -->
-
-      <!-- <div class="row">
-        <div class="form-group col-xs-6">
-            <label for="lastname" class="sr-only">
-              <input name="University" type="text" title="Enter university" ng-model="formData.school"
-              placeholder="University"/>
-            </label>
-        </div>
-        <div class="form-group col-xs-6">
-            <label for="age" class="sr-only">
-              <input name="Age" type="text" title="Enter age" ng-model="formData.age" placeholder="Age"/>
-              </br>
-            </label>
-        </div>
-      </div> -->
-
       <div class="pad-item"><h3>Where are you today?</h3></div>
-
-    <!-- <div>
-      <label>
-        <label>
-          <select ng-model="formData.height" ng-options="x for x in heights">
-            <option style="display:none" value="">Height</option>
-          </select>
-      </label>
-    </div> -->
-
-        <!-- <label for="cb" class="pure-checkbox right-align">
-          <input id="cb" ng-model="formData.showHeightOnProfile" type="checkbox" style="float: left; margin-top: 5px;"><div style="margin-left: 25px;">Do not show on profile</div>
-        </label> -->
 
     <div class="list">
         <label class="item item-input item-select">
@@ -115,32 +67,7 @@
         </li>
     </div>
 
-    <!-- <div>
-      <label>
-        <select ng-model="formData.weight" ng-options="x for x in weights">
-          <option style="display:none" value="">Weight</option>
-        </select>
-      </label>
-    </div> -->
-
-        <!-- <label for="cb" class="pure-checkbox right-align">
-          <input id="cb" ng-model="formData.showWeightOnProfile" type="checkbox" style="float: left; margin-top: 5px;"><div style="margin-left: 25px;">Do not show on profile</div>
-        </label> -->
-
-   
-
     </br>
-
-    <!-- <div class="pad-item"><label>Fitness Level</label></div>
-    <div>
-      <ul>
-        <form action="">
-          <input type="radio" name="FitnessLevel" value="Beginner" ng-model="formData.fitnessLevel"> Beginner<br>
-          <input type="radio" name="FitnessLevel" value="Intermediate" ng-model="formData.fitnessLevel"> Intermediate<br>
-          <input type="radio" name="FitnessLevel" value="Advanced" ng-model="formData.fitnessLevel"> Advanced<br>
-        </form>
-      </ul>
-    </div> -->
 
     <div class="pad-item"><h3>Fitness Level</h3></div>
     <div class="list">
@@ -168,23 +95,7 @@
     </div>
 
     </br>
-        <!-- <div class="pad-item"></div>
-        <div class="list">
-          <div>
-            <br>
-          <div>
-            <label>
-              <select ng-model="formData.goalWeight" ng-options="x for x in goalWeights">
-                <option style="display:none" value="">Goal Weight</option>
-              </select>
-          </div>
-          </label>
-          <label for="cb" class="pure-checkbox right-align">
-            <input id="cb" type="checkbox" style="float: left; margin-top: 5px;"><div style="margin-left: 25px;">Do not show on profile</div>
-          </label>
-        </div>
-
-          </br> -->
+    
     <div class="pad-item"><h3>Goal Weight</h3></div>
     <div class="list">
         <label class="item item-input item-select">
@@ -201,41 +112,30 @@
     </div>
 
     </br>
-          <!-- <div class="pad-item"><label>Where do you want to be?</label></div>
-          <div class="list">
-            <ul>
-              <form action="">
-                <input type="radio" name="FitnessGoals" value="Overall Health & Wellness" ng-model="formData.personalGoal"> Overall Health & Wellness<br>
-                <input type="radio" name="FitnessGoals" value="Build Muscle Mass" ng-model="formData.personalGoal"> Build Muscle<br>
-                <input type="radio" name="FitnessGoals" value="Lose Weight" ng-model="formData.personalGoal"> Lose Weight<br>
-              </form>
-            </ul>
-          </div> -->
 
-          <div class="pad-item"><h3>Where do you want to be?</h3></div>
-          <ion-list>
-            <li class="item item-checkbox">
-               Overall Health and Fitness
-               <label class="checkbox">
-               <input type="checkbox">
-               </label>
-            </li>
-            <li class="item item-checkbox">
-               Build Muscle Mass
-               <label class="checkbox">
-               <input type="checkbox">
-               </label>
-            </li>
-            <li class="item item-checkbox">
-               Lose Weight
-               <label class="checkbox">
-               <input type="checkbox">
-               </label>
-            </li>
-          </ion-list>
+    <div class="pad-item"><h3>Where do you want to be?</h3></div>
+    <ion-list>
+      <li class="item item-checkbox">
+        Overall Health and Fitness
+        <label class="checkbox">
+          <input type="checkbox">
+        </label>
+      </li>
+      <li class="item item-checkbox">
+        Build Muscle Mass
+        <label class="checkbox">
+        <input type="checkbox">
+        </label>
+      </li>
+      <li class="item item-checkbox">
+        Lose Weight
+        <label class="checkbox">
+        <input type="checkbox">
+        </label>
+      </li>
+    </ion-list>
 
-<!--         <button class="button icon-left ion-chevron-left button-clear button-dark" ui-sref="outside.register";>Back</button>-->
-        <button type="submit" class="button icon-right ion-chevron-right button-clear button-dark" style="float: right" ui-sref="pairingMode";>Next</button>
+    <button type="submit" class="button icon-right ion-chevron-right button-clear button-dark" style="float: right" ui-sref="pairingMode";>Next</button>
 
       </div>
       </form>

@@ -78,10 +78,15 @@
   </div>
 
   <ion-footer-bar class="bColorMain datafoot">
-    <h3 class="row">
-      <div class="col col-50">{{ cardTypes.firstName }} {{ card.lastName }}</div>
-    </h3>
+    <a ng-repeat="item in cardInfo">
+      <div ng-if="card_index == $index">
+        <h3>{{ item.firstName }} {{ item.lastName }}</h3>
+        <h4>Fitness Level: {{ item.fitnessLevel }}</h4>
+        <h4>Goal: {{ item.wdywtb }}</h4>
+      </div>
+    </a>
   </ion-footer-bar>
+
 
 </ion-pane>
 <!--
