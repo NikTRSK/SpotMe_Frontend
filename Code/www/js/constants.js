@@ -9,5 +9,5 @@ angular.module('starter')
   // holds the address of the API
   // url: 'http://192.168.237.128:8080/api'
   //  For a simulator use: url: 'http://127.0.0.1:8080/api'
-  url: 'http://127.0.0.1:8080/api'
+  url: 'http://localhost:8080/api'
 });
